@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: weather-mcp-server
+    name: weather-api-server
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python server.py
+    startCommand: python http_server.py
     plan: free
