@@ -1,15 +1,11 @@
-mcpVersion: "2024-11-05"
-name: "weather-mcp-server"
-description: "Weather information using Open-Meteo API"
-version: "1.0.0"
-
-server:
-  command: "python"
-  args: ["server.py"]
-  env: {}
-
-tools:
-  - name: "get_weather_by_city"
-    description: "Get weather information by city name"
-  - name: "get_weather_by_coordinates"
-    description: "Get weather information by coordinates"
+startCommand:
+  type: stdio
+configSchema:
+  type: object
+  properties: {}
+commandFunction: |-
+  (config) => ({
+    command: 'python3',
+    args: ['server.py']
+  })
+exampleConfig: {}
