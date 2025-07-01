@@ -34,4 +34,14 @@ async def get_weather_by_coordinates(latitude: float, longitude: float) -> str:
     return weather_response
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    print("🚀 Weather MCP Server başlatılıyor...")
+    print("📡 Transport: stdio")
+    print("🛠️ Araçlar: get_weather_by_city, get_weather_by_coordinates")
+    print("⏳ Server başlatılıyor...")
+
+    try:
+        mcp.run(transport="stdio")
+    except Exception as e:
+        print(f"❌ Server başlatma hatası: {e}")
+        import traceback
+        traceback.print_exc()
