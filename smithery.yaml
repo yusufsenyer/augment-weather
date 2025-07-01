@@ -2,21 +2,10 @@ startCommand:
   type: stdio
 configSchema:
   type: object
-  properties:
-    log_level:
-      type: string
-      enum: ["DEBUG", "INFO", "WARNING", "ERROR"]
-      default: "INFO"
-      description: "Log seviyesi"
-    server_name:
-      type: string
-      default: "weather-mcp-server"
-      description: "MCP server adı"
+  properties: {}
 commandFunction: |-
   (config) => ({
     command: 'python',
     args: ['server.py']
   })
-exampleConfig:
-  log_level: "INFO"
-  server_name: "weather-mcp-server"
+exampleConfig: {}
