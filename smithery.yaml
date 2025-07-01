@@ -1,4 +1,3 @@
-runtime: python
 startCommand:
   type: stdio
 configSchema:
@@ -10,5 +9,3 @@ commandFunction: |-
     args: ['server.py']
   })
 exampleConfig: {}
-buildCommand: |-
-  pip install -r requirements.txt
